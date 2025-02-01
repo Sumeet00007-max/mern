@@ -1,0 +1,157 @@
+.drawer {
+    width: 400px;
+    height: 100vh;
+    position: fixed ;
+    top: 0;
+    right: -400px; 
+    border-radius: 10px 0px 0px 10px;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index:100;
+    border-left: 1px solid #ccc;
+}
+
+.drawer.open {
+    right: 0; 
+}
+
+.drawerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #3B3C51;  
+    color: #fff;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.drawerHeader button {
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 10px;
+}
+
+.drawerBody {
+    padding: 1rem;
+    background-color: #fff;
+    flex-grow: 1;
+}
+
+.drawerBody form div {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.drawerBody form div label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.drawerBody form div label span {
+    color: red;
+}
+
+.drawerBody form div input,
+.drawerBody form div textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.drawerBody form div textarea {
+    height: 100px;
+}
+
+.drawerFooter {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ebebee;
+    border-radius: 0px 0px 0px 10px;
+}
+
+/* Specific button styles to prevent overlap */
+.drawerFooter button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.drawerFooter button.clearButton {
+    background-color: transparent;
+    color: #3B3C51; 
+    width:70px;
+}
+
+.drawerFooter button.createButton {
+    background-color: var(--primary-color);
+    color: white;
+    width:120px;
+    border: none; 
+    height:35px;
+}
+
+
+.drawerBody form div input[type="checkbox"] {
+    appearance: none;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.drawerBody form div input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.drawerBody form div input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+}
+
+.drawerBody form div input[type="checkbox"]:checked::before {
+    transform: translateX(25px);
+}
+
+.drawerBody form div.linkExp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  .input:focus,
+  .textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+.errorInput {
+    border: 3px solid red;
+    border-radius: 4px;
+    outline: red;
+  }
+
+@media (max-width: 768px) {
+    .drawer {
+        width: 100%;
+        border-radius: 0;
+        height: calc(100vh - 100px);
+    }
+}

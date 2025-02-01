@@ -1,0 +1,52 @@
+.mainContainer {
+    width: 100%;
+    align-self: center;
+    margin: auto;
+    
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 4rem auto;
+
+}
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 4rem auto;
+}
+
+.form input {
+
+    background: #FFFFFF;
+    border: 1px solid #3B3C51;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+.form input:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+}
+.form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form p {
+    text-align: center;
+    font-size: 0.875rem;
+}
+.form p span {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+.form p span:hover {
+    text-decoration: underline;
+}

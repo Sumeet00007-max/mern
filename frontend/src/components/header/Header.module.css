@@ -1,0 +1,91 @@
+.header {
+    width: 100%;
+    padding: 1.5rem;
+    border-bottom: 1px solid #E5E5E5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.greeting {
+    font-size: 1rem;
+}
+.greeting p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #878BA9;
+    margin-left: 25px;
+}
+
+.headerFunc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+.headerFunc button {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+.headerFunc button:hover {
+    background-color: #334b9c
+}
+.headerFunc input{
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #E5E5E5;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #FDE48A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout {
+    position: absolute;
+    right: 1rem;
+    top: 5rem;
+    background-color: white;
+    border: 1px solid #E5E5E5;
+    border-radius: 6px;
+    width: 150px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.logout button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #e5e5e5;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+}
+@media (max-width: 768px) {
+    .header{
+        flex-direction: column;
+        padding: 1rem;
+        width: 100%;
+    }
+    .greeting p{
+        text-align: center;
+    }
+    .avatar {
+        position: absolute;
+        top: 0.7rem;
+        right: 0.7rem;
+        width: 30px;
+        height: 30px;
+        font-size: 8px;
+    }
+    .headerFunc {
+        margin-top: 0.8rem;
+    }
+    
+}
